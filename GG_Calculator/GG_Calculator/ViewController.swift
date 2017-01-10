@@ -32,7 +32,28 @@ class ViewController: UIViewController {
 
   @IBAction func onCalculate(_ sender: Any) {
     print("Calculating")
+    
+    //A guard statement is used to transfer program control out of a scope if one or more conditions aren’t met. 
+    //https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Statements.html
+    guard let cGrade = cGradeField.text, !cGrade.isEmpty else {
+      errorLabel.isHidden = false
+      errorLabel.text = "Error"
+      return
+    }
+    
+    guard let dGrade = dGradeField.text, !dGrade.isEmpty else {
+      errorLabel.isHidden = false
+      errorLabel.text = "Error"
+      return
+    }
+    
+    guard let fWeight = fWeightField.text, !fWeight.isEmpty else {
+      errorLabel.isHidden = false
+      errorLabel.text = "Error"
+      return
+    }
   }
+  
 
 }
 
