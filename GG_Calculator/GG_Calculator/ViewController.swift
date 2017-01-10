@@ -10,6 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  @IBOutlet weak var cGradeField: UITextField!
+  
+  @IBOutlet weak var dGradeField: UITextField!
+  
+  @IBOutlet weak var fWeightField: UITextField!
+  
+  @IBOutlet weak var pNeededLabel: UILabel!
+  
+  @IBOutlet weak var errorLabel: UILabel!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +30,9 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
+  @IBAction func onCalculate(_ sender: Any) {
+    print("Calculating")
+  }
 
 }
 
