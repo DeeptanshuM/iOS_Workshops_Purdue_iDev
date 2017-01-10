@@ -52,8 +52,22 @@ class ViewController: UIViewController {
       errorLabel.text = "Error"
       return
     }
+   
+    let cGradeVal = Double(cGrade)!
+    let dGradeVal = Double(dGrade)!
+    let fWeightVal = Double(fWeight)!
+    
+    // ((100 - finalWeight) / 100) * cGrade
+    // diffGrade = gradeWeWant - gradeWeHave
+    // diffGrade / finalWeight * 100
+    
+    let UWGrade = ((100 - fWeightVal) / 100) * cGradeVal
+    
+    let diffGrade = dGradeVal - UWGrade
+    
+    let fGrade = diffGrade / fWeightVal * 100
+    
+    pNeededLabel.text = "\(fGrade)%"
   }
-  
-
 }
 
