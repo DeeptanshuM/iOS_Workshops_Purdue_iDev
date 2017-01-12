@@ -1,0 +1,13 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'iDev_Business_Viewer_live' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for iDev_Business_Viewer_live
+
+  pod 'SwiftyJSON'
+  pod 'Alamofire'
+
+end
