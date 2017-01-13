@@ -16,7 +16,7 @@ class ViewController: UIViewController {
   
   @IBOutlet weak var fWeightField: UITextField!
   
-  @IBOutlet weak var pNeededLabel: UILabel!
+  //@IBOutlet weak var pNeededLabel: UILabel!
   
   @IBOutlet weak var errorLabel: UILabel!
   
@@ -67,7 +67,7 @@ class ViewController: UIViewController {
     
     let fGrade = diffGrade / fWeightVal * 100
     
-    pNeededLabel.text = "\(fGrade)%"
+    //pNeededLabel.text = "\(fGrade)%"
   }
 }
 
