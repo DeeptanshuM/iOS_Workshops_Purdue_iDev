@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1852E807FDA170B36C9FD65B /* Pods_iDev_Business_Viewer_live.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19158C9E8351A89508BB25C9 /* Pods_iDev_Business_Viewer_live.framework */; };
+		AE3F9AF81E29B934004C647F /* BusinessesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3F9AF71E29B934004C647F /* BusinessesViewController.swift */; };
+		AE3F9AFA1E29B9E7004C647F /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3F9AF91E29B9E7004C647F /* Business.swift */; };
 		AE4AA8B71E27131B0014A263 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4AA8B61E27131B0014A263 /* AppDelegate.swift */; };
 		AE4AA8B91E27131B0014A263 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4AA8B81E27131B0014A263 /* ViewController.swift */; };
 		AE4AA8BC1E27131B0014A263 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE4AA8BA1E27131B0014A263 /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 		19158C9E8351A89508BB25C9 /* Pods_iDev_Business_Viewer_live.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iDev_Business_Viewer_live.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62CA4F156B8C83FDBB7644AF /* Pods-iDev_Business_Viewer_live.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iDev_Business_Viewer_live.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iDev_Business_Viewer_live/Pods-iDev_Business_Viewer_live.debug.xcconfig"; sourceTree = "<group>"; };
 		986DAD6CAB64F91CE6342221 /* Pods-iDev_Business_Viewer_live.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iDev_Business_Viewer_live.release.xcconfig"; path = "Pods/Target Support Files/Pods-iDev_Business_Viewer_live/Pods-iDev_Business_Viewer_live.release.xcconfig"; sourceTree = "<group>"; };
+		AE3F9AF71E29B934004C647F /* BusinessesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessesViewController.swift; sourceTree = "<group>"; };
+		AE3F9AF91E29B9E7004C647F /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		AE4AA8B31E27131B0014A263 /* iDev_Business_Viewer_live.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDev_Business_Viewer_live.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE4AA8B61E27131B0014A263 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE4AA8B81E27131B0014A263 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 				AE4AA8BD1E27131B0014A263 /* Assets.xcassets */,
 				AE4AA8BF1E27131B0014A263 /* LaunchScreen.storyboard */,
 				AE4AA8C21E27131B0014A263 /* Info.plist */,
+				AE3F9AF71E29B934004C647F /* BusinessesViewController.swift */,
+				AE3F9AF91E29B9E7004C647F /* Business.swift */,
 			);
 			path = iDev_Business_Viewer_live;
 			sourceTree = "<group>";
@@ -212,7 +218,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE4AA8B91E27131B0014A263 /* ViewController.swift in Sources */,
+				AE3F9AFA1E29B9E7004C647F /* Business.swift in Sources */,
 				AE4AA8B71E27131B0014A263 /* AppDelegate.swift in Sources */,
+				AE3F9AF81E29B934004C647F /* BusinessesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +382,7 @@
 				AE4AA8C71E27131B0014A263 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
