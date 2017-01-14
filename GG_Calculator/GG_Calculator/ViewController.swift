@@ -16,9 +16,13 @@ class ViewController: UIViewController {
   
   @IBOutlet weak var fWeightField: UITextField!
   
+  @IBOutlet weak var outputLabel: UILabel!
+  
   //@IBOutlet weak var pNeededLabel: UILabel!
   
-  @IBOutlet weak var errorLabel: UILabel!
+  //@IBOutlet weak var outputLabel: UILabel!
+  
+  var outputMessage: String = ""
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -36,22 +40,38 @@ class ViewController: UIViewController {
     //A guard statement is used to transfer program control out of a scope if one or more conditions aren’t met. 
     //https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Statements.html
     guard let cGrade = cGradeField.text, !cGrade.isEmpty else {
-      errorLabel.isHidden = false
-      errorLabel.text = "Error"
+      outputMessage += "Enter current grade"
       return
     }
     
     guard let dGrade = dGradeField.text, !dGrade.isEmpty else {
-      errorLabel.isHidden = false
-      errorLabel.text = "Error"
+      if outputMessage.characters.count == 0
+      {
+        outputMessage += "Enter desired grade"
+      }
+      else
+      {
+        outputMessage += ", enter desired grade"
+      }
       return
     }
     
     guard let fWeight = fWeightField.text, !fWeight.isEmpty else {
-      errorLabel.isHidden = false
-      errorLabel.text = "Error"
+      if outputMessage.characters.count == 0
+      {
+        outputMessage += "Enter % weight of final exam in overall grade"
+      }
+      else
+      {
+        outputMessage += ", enter % weight of final exam in overall grade"
+      }
       return
     }
+    
+    outputLabel.isHidden = false
+
+    if outputMessage.characters.count == 0
+    {
    
     let cGradeVal = Double(cGrade)!
     let dGradeVal = Double(dGrade)!
@@ -67,7 +87,11 @@ class ViewController: UIViewController {
     
     let fGrade = diffGrade / fWeightVal * 100
     
-    //pNeededLabel.text = "\(fGrade)%"
+    outputMessage = "\(fGrade)%"
+    
+    }
+    outputLabel.text = outputMessage
+    print(outputMessage)
   }
 }
 

@@ -112,8 +112,8 @@
                     <connections>
                         <outlet property="cGradeField" destination="fOP-x5-V3B" id="hyQ-qh-5w6"/>
                         <outlet property="dGradeField" destination="W0W-UD-e3H" id="TLL-ix-Gav"/>
-                        <outlet property="errorLabel" destination="0aw-1m-fOO" id="iri-rp-NcX"/>
                         <outlet property="fWeightField" destination="HpV-9q-BeK" id="EDs-s6-0o2"/>
+                        <outlet property="outputLabel" destination="0aw-1m-fOO" id="lRy-je-w9m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
