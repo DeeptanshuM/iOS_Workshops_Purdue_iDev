@@ -9,5 +9,6 @@ target 'iDev_Business_Viewer_live' do
 
   pod 'SwiftyJSON'
   pod 'Alamofire'
-
+  pod 'AFNetworking'
+	
 end
