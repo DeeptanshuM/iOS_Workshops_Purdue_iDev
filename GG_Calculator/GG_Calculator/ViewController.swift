@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+  
   @IBOutlet weak var cGradeField: UITextField!
   
   @IBOutlet weak var dGradeField: UITextField!
@@ -17,34 +17,37 @@ class ViewController: UIViewController {
   @IBOutlet weak var fWeightField: UITextField!
   
   @IBOutlet weak var outputLabel: UILabel!
-  
-  //@IBOutlet weak var pNeededLabel: UILabel!
+  //
+  //  //@IBOutlet weak var pNeededLabel: UILabel!
   
   //@IBOutlet weak var outputLabel: UILabel!
-  
-  var outputMessage: String = ""
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
   }
-
+  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-
+  
   @IBAction func onCalculate(_ sender: Any) {
     print("Calculating")
+    print("\t", cGradeField.text!)
+    print("\t", dGradeField.text!)
+    print("\t", fWeightField.text!)
     
-    //A guard statement is used to transfer program control out of a scope if one or more conditions aren’t met. 
-    //https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Statements.html
-    guard let cGrade = cGradeField.text, !cGrade.isEmpty else {
+    var outputMessage: String = ""
+    
+    let cGrade = cGradeField.text!
+    let dGrade = dGradeField.text!
+    let fWeight = fWeightField.text!
+    
+    if cGrade.isEmpty {
       outputMessage += "Enter current grade"
-      return
     }
     
-    guard let dGrade = dGradeField.text, !dGrade.isEmpty else {
+    if dGrade.isEmpty {
       if outputMessage.characters.count == 0
       {
         outputMessage += "Enter desired grade"
@@ -53,10 +56,9 @@ class ViewController: UIViewController {
       {
         outputMessage += ", enter desired grade"
       }
-      return
     }
     
-    guard let fWeight = fWeightField.text, !fWeight.isEmpty else {
+    if fWeight.isEmpty {
       if outputMessage.characters.count == 0
       {
         outputMessage += "Enter % weight of final exam in overall grade"
@@ -65,30 +67,27 @@ class ViewController: UIViewController {
       {
         outputMessage += ", enter % weight of final exam in overall grade"
       }
-      return
     }
     
-    outputLabel.isHidden = false
-
     if outputMessage.characters.count == 0
     {
-   
-    let cGradeVal = Double(cGrade)!
-    let dGradeVal = Double(dGrade)!
-    let fWeightVal = Double(fWeight)!
-    
-    // ((100 - finalWeight) / 100) * cGrade
-    // diffGrade = gradeWeWant - gradeWeHave
-    // diffGrade / finalWeight * 100
-    
-    let UWGrade = ((100 - fWeightVal) / 100) * cGradeVal
-    
-    let diffGrade = dGradeVal - UWGrade
-    
-    let fGrade = diffGrade / fWeightVal * 100
-    
-    outputMessage = "\(fGrade)%"
-    
+      
+      let cGradeVal = Double(cGrade)!
+      let dGradeVal = Double(dGrade)!
+      let fWeightVal = Double(fWeight)!
+      
+      // ((100 - finalWeight) / 100) * cGrade
+      // diffGrade = gradeWeWant - gradeWeHave
+      // diffGrade / finalWeight * 100
+      
+      let UWGrade = ((100 - fWeightVal) / 100) * cGradeVal
+      
+      let diffGrade = dGradeVal - UWGrade
+      
+      let fGrade = Double(diffGrade / fWeightVal * 100)
+      
+      outputMessage = "\(round(fGrade * 100) / 100)%"
+      
     }
     outputLabel.text = outputMessage
     print(outputMessage)
