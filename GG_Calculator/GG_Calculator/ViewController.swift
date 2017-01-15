@@ -44,13 +44,13 @@ class ViewController: UIViewController {
     let fWeight = fWeightField.text!
     
     if cGrade.isEmpty {
-      outputMessage += "Enter current grade"
+      outputMessage += "Error: enter current grade"
     }
     
     if dGrade.isEmpty {
       if outputMessage.characters.count == 0
       {
-        outputMessage += "Enter desired grade"
+        outputMessage += "Error: enter desired grade"
       }
       else
       {
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
     if fWeight.isEmpty {
       if outputMessage.characters.count == 0
       {
-        outputMessage += "Enter % weight of final exam in overall grade"
+        outputMessage += "Error: enter % weight of final exam in overall grade"
       }
       else
       {
