@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
   
 //  The IBOutlet attribute tells Xcode that you can connect to the nameTextField
 //  property from Interface Builder (which is why the attribute has the IB prefix). The
@@ -30,14 +30,39 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    // Handle the text field’s user input through delegate callbacks.
+    //When a ViewController instance is loaded, it sets itself as the delegate of its nameTextField property.
+    nameTextField.delegate = self
+    
   }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-
+  
+  //When a user wants to finish editing the text field, the text field needs to
+  //resign its first-responder status. Because the text field will no longer be the
+  //active object in the app, events need to get routed to a more appropriate object.
+  
+  //This is where your implementation of UITextFieldDelegate methods comes in. You
+  //need to specify that the text field should resign its first-responder status when
+  //the user taps a button to end editing in the text field. You do this in the
+  //textFieldShouldReturn(_:) method, which gets called when the user taps Return (or
+  //in this case, Done) on the keyboard.
+  //https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/ConnectTheUIToCode.html#//apple_ref/doc/uid/TP40015214-CH22-SW1
+  
+  //MARK: UITextFieldDelegate
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    //Hide the keyboard
+    textField.resignFirstResponder()
+    return true
+  }
+  
+  func textFieldDidEndEditing(_ textField: UITextField) {
+    mealNameLabel.text = textField.text
+  }
   //MARK: Actions
 
   @IBAction func setDefaultLabelText(_ sender: UIButton) {
