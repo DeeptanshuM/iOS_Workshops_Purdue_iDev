@@ -38,11 +38,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
   }
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-  
   //When a user wants to finish editing the text field, the text field needs to
   //resign its first-responder status. Because the text field will no longer be the
   //active object in the app, events need to get routed to a more appropriate object.
@@ -60,6 +55,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     textField.resignFirstResponder()
     return true
   }
+  
   
   func textFieldDidEndEditing(_ textField: UITextField) {
     mealNameLabel.text = textField.text
@@ -88,6 +84,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
   //MARK: Actions
 
   @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
+  
     // Hide the keyboard.
     nameTextField.resignFirstResponder()
     
