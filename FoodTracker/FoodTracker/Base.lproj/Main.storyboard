@@ -52,6 +52,7 @@
                                         </constraints>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="QkV-N6-p2u" appends="YES" id="OvJ-Er-Tgh"/>
+                                            <outletCollection property="gestureRecognizers" destination="QkV-N6-p2u" appends="YES" id="pme-op-6VG"/>
                                         </connections>
                                     </imageView>
                                 </subviews>
