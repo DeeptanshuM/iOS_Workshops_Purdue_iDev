@@ -40,6 +40,12 @@ class ViewController: UIViewController {
         
         let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
         
+        let ok = UIAlertAction(title: "Ok", style: .cancel, handler: {
+          (alert) in self.parent?.dismiss(animated: true, completion: { 
+            
+          })
+        })
+        alert.addAction(ok)
         self.present(alert, animated: true, completion: {
           
         })
