@@ -25,7 +25,13 @@ class ViewController: UIViewController {
   }
 
   @IBAction func onSignUp(_ sender: Any) {
+    FIRAuth.auth()?.createUser(withEmail: emailField.text!, password: passwordField.text!, completion: { (user, error) in
+      if error != nil {
+        print(error?.localizedDescription)
+      }
+    })
   }
+  //hhhhhhhhhhhhhhh
   
   @IBAction func onLogin(_ sender: Any) {
   }
