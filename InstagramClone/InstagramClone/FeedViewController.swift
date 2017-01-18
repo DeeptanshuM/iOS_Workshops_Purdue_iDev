@@ -7,9 +7,27 @@
 //
 
 import UIKit
+import Firebase
 
 class FeedViewController: UITableViewController {
 
+  @IBAction func onSignOut(_ sender: Any) {
+
+    do{
+    try FIRAuth.auth()?.signOut()
+      
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    
+    let loginScreen = storyboard.instantiateViewController(withIdentifier: "login")
+    
+    self.present(loginScreen, animated: true, completion: nil)
+      print("hi")
+    }
+    catch let error as NSError{
+      print(error.localizedDescription)
+    }
+    
+  }
     override func viewDidLoad() {
         super.viewDidLoad()
 
