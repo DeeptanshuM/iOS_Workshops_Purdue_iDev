@@ -34,6 +34,20 @@ class ViewController: UIViewController {
   //hhhhhhhhhhhhhhh
   
   @IBAction func onLogin(_ sender: Any) {
+    FIRAuth.auth()?.signIn(withEmail: emailField.text!, password: passwordField.text!, completion: { (user, error) in
+      if error != nil {
+        print(error?.localizedDescription)
+        
+        let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+        
+        self.present(alert, animated: true, completion: {
+          
+        })
+      }
+      else{
+        print("hi")
+      }
+    })
   }
 
 }
