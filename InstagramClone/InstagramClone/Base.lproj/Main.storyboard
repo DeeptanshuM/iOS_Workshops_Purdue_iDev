@@ -101,7 +101,16 @@
                             <outlet property="delegate" destination="7Fy-c6-3ab" id="aUF-SY-i5i"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="K5C-V1-Fli"/>
+                    <navigationItem key="navigationItem" id="K5C-V1-Fli">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="Vtp-9h-KLo">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VV4-Os-2D0">
+                                <rect key="frame" x="16" y="7" width="150" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign Out"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i96-aq-tr6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

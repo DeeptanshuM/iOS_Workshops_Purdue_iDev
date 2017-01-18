@@ -13,6 +13,7 @@
 		AEB5D45D1E2EFAC200D380E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEB5D45C1E2EFAC200D380E6 /* Assets.xcassets */; };
 		AEB5D4601E2EFAC200D380E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEB5D45E1E2EFAC200D380E6 /* LaunchScreen.storyboard */; };
 		AEB5D4681E2EFD5900D380E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEB5D4671E2EFD5900D380E6 /* GoogleService-Info.plist */; };
+		AEEFE7C11E2F0CE900ED1A0B /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEFE7C01E2F0CE900ED1A0B /* FeedViewController.swift */; };
 		B11A58BED67D87113F2E9C31 /* Pods_InstagramClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4AE1DFC6B5BAA0D5B22BF6 /* Pods_InstagramClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		AEB5D45F1E2EFAC200D380E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEB5D4611E2EFAC200D380E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEB5D4671E2EFD5900D380E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AEEFE7C01E2F0CE900ED1A0B /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				AEB5D4551E2EFAC200D380E6 /* AppDelegate.swift */,
+				AEEFE7C01E2F0CE900ED1A0B /* FeedViewController.swift */,
 				AEB5D4571E2EFAC200D380E6 /* ViewController.swift */,
 				AEB5D4591E2EFAC200D380E6 /* Main.storyboard */,
 				AEB5D45C1E2EFAC200D380E6 /* Assets.xcassets */,
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEB5D4581E2EFAC200D380E6 /* ViewController.swift in Sources */,
+				AEEFE7C11E2F0CE900ED1A0B /* FeedViewController.swift in Sources */,
 				AEB5D4561E2EFAC200D380E6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
