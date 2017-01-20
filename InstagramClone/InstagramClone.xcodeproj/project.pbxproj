@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE8EC2F81E319F9E006BBA90 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8EC2F71E319F9E006BBA90 /* PostViewController.swift */; };
 		AEB5D4561E2EFAC200D380E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB5D4551E2EFAC200D380E6 /* AppDelegate.swift */; };
 		AEB5D4581E2EFAC200D380E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB5D4571E2EFAC200D380E6 /* ViewController.swift */; };
 		AEB5D45B1E2EFAC200D380E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEB5D4591E2EFAC200D380E6 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		109D1FB2F243DD762CA31913 /* Pods-InstagramClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramClone/Pods-InstagramClone.release.xcconfig"; sourceTree = "<group>"; };
 		9A4AE1DFC6B5BAA0D5B22BF6 /* Pods_InstagramClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D15171CFFD59C998E14084F /* Pods-InstagramClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramClone/Pods-InstagramClone.debug.xcconfig"; sourceTree = "<group>"; };
+		AE8EC2F71E319F9E006BBA90 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		AEB5D4521E2EFAC200D380E6 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB5D4551E2EFAC200D380E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEB5D4571E2EFAC200D380E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				AEEFE7C01E2F0CE900ED1A0B /* FeedViewController.swift */,
 				AEB5D4571E2EFAC200D380E6 /* ViewController.swift */,
 				AEB5D4591E2EFAC200D380E6 /* Main.storyboard */,
+				AE8EC2F71E319F9E006BBA90 /* PostViewController.swift */,
 				AEB5D45C1E2EFAC200D380E6 /* Assets.xcassets */,
 				AEB5D45E1E2EFAC200D380E6 /* LaunchScreen.storyboard */,
 				AEB5D4611E2EFAC200D380E6 /* Info.plist */,
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE8EC2F81E319F9E006BBA90 /* PostViewController.swift in Sources */,
 				AEB5D4581E2EFAC200D380E6 /* ViewController.swift in Sources */,
 				AEEFE7C11E2F0CE900ED1A0B /* FeedViewController.swift in Sources */,
 				AEB5D4561E2EFAC200D380E6 /* AppDelegate.swift in Sources */,
