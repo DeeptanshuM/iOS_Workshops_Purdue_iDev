@@ -14,6 +14,7 @@ class PostViewController: UIViewController {
 
   @IBOutlet weak var postField: UITextField!
 
+  var dataRef = FIRDatabase.database().reference()
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,18 @@ class PostViewController: UIViewController {
     
   @IBAction func onPost(_ sender: Any) {
     
+    print("Posting")
+    
+    let usersRef = dataRef.child("posts").childByAutoId()
+
+    var postInfo: [String:String] = [:]
+    
+    postInfo["text"] = postField.text
+    postInfo["user"] = FIRAuth.auth()?.currentUser?.email!
+    
+    usersRef.setValue(postInfo)
+    
+    self.navigationController?.popViewController(animated: true)
   }
 
     /*

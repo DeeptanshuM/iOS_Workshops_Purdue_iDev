@@ -113,7 +113,11 @@
                                 </connections>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="yd6-Vs-FMM"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="yd6-Vs-FMM">
+                            <connections>
+                                <segue destination="eu0-e9-R9p" kind="show" id="TyA-Yl-EM3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i96-aq-tr6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -138,6 +142,9 @@
                                 <state key="normal" title="Post">
                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onPost:" destination="eu0-e9-R9p" eventType="touchUpInside" id="ZmD-3r-NYn"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s9u-Uc-8db">
                                 <rect key="frame" x="35" y="127" width="298" height="30"/>
